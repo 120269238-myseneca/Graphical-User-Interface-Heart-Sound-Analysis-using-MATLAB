@@ -47,7 +47,10 @@ spiked between these two frequencies. It was after this that I learned that inde
 ![image](https://github.com/sodeep112/Graphical-User-Interface-Heart-Sound-Analysis-using-MATLAB/assets/63743435/610cd5ac-36f2-4a05-9fec-dd51dcb486da)
 The next four lines are the next key component of the program, which is where the program detects the peaks of the filtered sound file. In an electrocardiogram, one heart beat is represented as one pulse, however in a heart sound signal, one heartbeat is two consecutive peaks. For finding the peaks that should be detected as a heart beat, I use the findpeaks() function to find the peaks which have a minimum peak height value of the 99th percentile of all sound samples, and
 also have a minimum distance of 250 samples per peak. This minimum distance was chosen experimentally, and I have observed that for longer sound samples, this value should be shorter for a more accurate result.
+
+
 ![image](https://github.com/sodeep112/Graphical-User-Interface-Heart-Sound-Analysis-using-MATLAB/assets/63743435/6bc4a743-76d1-4cf4-b340-e3a67ebfcb81)
+
 ![image](https://github.com/sodeep112/Graphical-User-Interface-Heart-Sound-Analysis-using-MATLAB/assets/63743435/cc775c49-69aa-4449-866e-053eb8e23236)
 
 
@@ -56,6 +59,8 @@ One heartbeat of a heart sound file that corresponds to one ECG pulse.
 The concluding lines of the function are where the program sums up the number of peaks, and displays the result in the GUI. Since every two peaks is one heartbeat, it divides this value by 2. By dividing the value by the time of the sample, we get the value of the heart beats per second, which can be multiplied by 60 to give us our desired calculation of beats per minute.
 
 Result:-
+
+
 ![image](https://github.com/sodeep112/Graphical-User-Interface-Heart-Sound-Analysis-using-MATLAB/assets/63743435/466c1b75-2482-4364-87de-24ceb18fa11e)
 
 Fig- GUI Telling what result you got
